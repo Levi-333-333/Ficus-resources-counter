@@ -163,5 +163,41 @@
             </LinearLayout>
         </LinearLayout>
 
+        <!-- Ячейки третьего уровня -->
+        <LinearLayout
+            android:id="@+id/SpellIII"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/textSpellIII"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Количество ячеек третьего уровня" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/minusButtonSpellIII"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/button_minus" />
+                <TextView
+                    android:id="@+id/countSpellIII"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="" />
+                <Button
+                    android:id="@+id/plusButtonSpellIII"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/button_plus" />
+            </LinearLayout>
+        </LinearLayout>
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

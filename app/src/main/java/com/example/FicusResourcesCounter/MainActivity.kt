@@ -94,5 +94,24 @@ class MainActivity : AppCompatActivity() {
             if (countSpellII?.text.toString().toInt() > MAX_SPELL_II_COUNT)
                 countSpellII?.setText(MAX_SPELL_II_COUNT.toString())
         }
+
+        // Ячейки третьего уровня
+        val countSpellIII: TextView? = findViewById(R.id.countSpellIII);
+        val minusButtonSpellIII: Button = findViewById(R.id.minusButtonSpellIII)
+        val plusButtonSpellIII: Button = findViewById(R.id.plusButtonSpellIII)
+
+        if (countSpellIII?.text.toString() == "")
+            countSpellIII?.setText(MAX_SPELL_III_COUNT.toString())
+
+        minusButtonSpellIII.setOnClickListener {
+            countSpellIII?.setText((countSpellIII.text.toString().toInt() - 1).toString())
+            if (countSpellIII?.text.toString().toInt() < 0)
+                countSpellIII?.setText(0.toString())
+        }
+        plusButtonSpellIII.setOnClickListener {
+            countSpellIII?.setText((countSpellIII.text.toString().toInt() + 1).toString())
+            if (countSpellIII?.text.toString().toInt() > MAX_SPELL_III_COUNT)
+                countSpellIII?.setText(MAX_SPELL_III_COUNT.toString())
+        }
     }
 }
