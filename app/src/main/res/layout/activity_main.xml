@@ -199,5 +199,41 @@
             </LinearLayout>
         </LinearLayout>
 
+        <!-- Ячейки фокальных заклинаний уровня -->
+        <LinearLayout
+            android:id="@+id/FocalSpell"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/textFocalSpell"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Количество ячеек фокальных заклинаний" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/minusButtonFocalSpell"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/button_minus" />
+                <TextView
+                    android:id="@+id/countFocalSpell"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="" />
+                <Button
+                    android:id="@+id/plusButtonFocalSpell"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/button_plus" />
+            </LinearLayout>
+        </LinearLayout>
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

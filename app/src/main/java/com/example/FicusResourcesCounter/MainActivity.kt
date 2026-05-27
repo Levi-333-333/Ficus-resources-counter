@@ -113,5 +113,24 @@ class MainActivity : AppCompatActivity() {
             if (countSpellIII?.text.toString().toInt() > MAX_SPELL_III_COUNT)
                 countSpellIII?.setText(MAX_SPELL_III_COUNT.toString())
         }
+
+        // Ячейки фокальных заклинаний
+        val countFocalSpell: TextView? = findViewById(R.id.countFocalSpell);
+        val minusButtonFocalSpell: Button = findViewById(R.id.minusButtonFocalSpell)
+        val plusButtonFocalSpell: Button = findViewById(R.id.plusButtonFocalSpell)
+
+        if (countFocalSpell?.text.toString() == "")
+            countFocalSpell?.setText(MAX_FOCAL_SPELL_COUNT.toString())
+
+        minusButtonFocalSpell.setOnClickListener {
+            countFocalSpell?.setText((countFocalSpell.text.toString().toInt() - 1).toString())
+            if (countFocalSpell?.text.toString().toInt() < 0)
+                countFocalSpell?.setText(0.toString())
+        }
+        plusButtonFocalSpell.setOnClickListener {
+            countFocalSpell?.setText((countFocalSpell.text.toString().toInt() + 1).toString())
+            if (countFocalSpell?.text.toString().toInt() > MAX_FOCAL_SPELL_COUNT)
+                countFocalSpell?.setText(MAX_FOCAL_SPELL_COUNT.toString())
+        }
     }
 }
