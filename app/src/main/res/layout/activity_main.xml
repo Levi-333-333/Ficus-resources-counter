@@ -127,5 +127,41 @@
             </LinearLayout>
         </LinearLayout>
 
+        <!-- Ячейки второго уровня -->
+        <LinearLayout
+            android:id="@+id/SpellII"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/textSpellII"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Количество ячеек второго уровня" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/minusButtonSpellII"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/button_minus" />
+                <TextView
+                    android:id="@+id/countSpellII"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="" />
+                <Button
+                    android:id="@+id/plusButtonSpellII"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/button_plus" />
+            </LinearLayout>
+        </LinearLayout>
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -75,5 +75,24 @@ class MainActivity : AppCompatActivity() {
             if (countSpellI?.text.toString().toInt() > MAX_SPELL_I_COUNT)
                 countSpellI?.setText(MAX_SPELL_I_COUNT.toString())
         }
+
+        // Ячейки второго уровня
+        val countSpellII: TextView? = findViewById(R.id.countSpellII);
+        val minusButtonSpellII: Button = findViewById(R.id.minusButtonSpellII)
+        val plusButtonSpellII: Button = findViewById(R.id.plusButtonSpellII)
+
+        if (countSpellII?.text.toString() == "")
+            countSpellII?.setText(MAX_SPELL_II_COUNT.toString())
+
+        minusButtonSpellII.setOnClickListener {
+            countSpellII?.setText((countSpellII.text.toString().toInt() - 1).toString())
+            if (countSpellII?.text.toString().toInt() < 0)
+                countSpellII?.setText(0.toString())
+        }
+        plusButtonSpellII.setOnClickListener {
+            countSpellII?.setText((countSpellII.text.toString().toInt() + 1).toString())
+            if (countSpellII?.text.toString().toInt() > MAX_SPELL_II_COUNT)
+                countSpellII?.setText(MAX_SPELL_II_COUNT.toString())
+        }
     }
 }
