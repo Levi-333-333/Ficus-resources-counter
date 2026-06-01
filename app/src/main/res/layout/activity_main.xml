@@ -235,5 +235,41 @@
             </LinearLayout>
         </LinearLayout>
 
+        <!-- Фрукты Фикуса -->
+        <LinearLayout
+            android:id="@+id/FicusFruits"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/textFicusFruits"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Количество ячеек фокальных заклинаний" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/minusButtonFicusFruits"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/button_minus" />
+                <TextView
+                    android:id="@+id/countFicusFruits"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="" />
+                <Button
+                    android:id="@+id/plusButtonFicusFruits"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/button_plus" />
+            </LinearLayout>
+        </LinearLayout>
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

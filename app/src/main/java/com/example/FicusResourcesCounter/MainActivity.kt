@@ -132,5 +132,24 @@ class MainActivity : AppCompatActivity() {
             if (countFocalSpell?.text.toString().toInt() > MAX_FOCAL_SPELL_COUNT)
                 countFocalSpell?.setText(MAX_FOCAL_SPELL_COUNT.toString())
         }
+
+        // Фрукты Фикуса
+        val countFicusFruits: TextView? = findViewById(R.id.countFicusFruits);
+        val minusButtonFicusFruits: Button = findViewById(R.id.minusButtonFicusFruits)
+        val plusButtonFicusFruits: Button = findViewById(R.id.plusButtonFicusFruits)
+
+        if (countFicusFruits?.text.toString() == "")
+            countFicusFruits?.setText(MAX_FICUS_FRUITS.toString())
+
+        minusButtonFicusFruits.setOnClickListener {
+            countFicusFruits?.setText((countFicusFruits.text.toString().toInt() - 1).toString())
+            if (countFicusFruits?.text.toString().toInt() < 0)
+                countFicusFruits?.setText(0.toString())
+        }
+        plusButtonFicusFruits.setOnClickListener {
+            countFicusFruits?.setText((countFicusFruits.text.toString().toInt() + 1).toString())
+            if (countFicusFruits?.text.toString().toInt() > MAX_FICUS_FRUITS)
+                countFicusFruits?.setText(MAX_FICUS_FRUITS.toString())
+        }
     }
 }

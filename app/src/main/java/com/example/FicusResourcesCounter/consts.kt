@@ -6,3 +6,4 @@ const val MAX_SPELL_I_COUNT: Int = 3
 const val MAX_SPELL_II_COUNT: Int = 3
 const val MAX_SPELL_III_COUNT: Int = 2
 const val MAX_FOCAL_SPELL_COUNT: Int = 2
+const val MAX_FICUS_FRUITS: Int = 10
