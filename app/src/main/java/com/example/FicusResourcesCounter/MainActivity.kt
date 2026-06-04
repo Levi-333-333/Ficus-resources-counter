@@ -151,5 +151,22 @@ class MainActivity : AppCompatActivity() {
             if (countFicusFruits?.text.toString().toInt() > MAX_FICUS_FRUITS)
                 countFicusFruits?.setText(MAX_FICUS_FRUITS.toString())
         }
+
+        // Обычные ингридиенты
+        val countCommonIngredients: TextView? = findViewById(R.id.countCommonIngredients);
+        val minusButtonCommonIngredients: Button = findViewById(R.id.minusButtonCommonIngredients)
+        val plusButtonCommonIngredients: Button = findViewById(R.id.plusButtonCommonIngredients)
+
+        if (countCommonIngredients?.text.toString() == "")
+            countCommonIngredients?.setText(0.toString())
+
+        minusButtonCommonIngredients.setOnClickListener {
+            countCommonIngredients?.setText((countCommonIngredients!!.text.toString().toInt() - 1).toString())
+            if (countCommonIngredients?.text.toString().toInt() < 0)
+                countCommonIngredients?.setText(0.toString())
+        }
+        plusButtonCommonIngredients.setOnClickListener {
+            countCommonIngredients?.setText((countCommonIngredients!!.text.toString().toInt() + 1).toString())
+        }
     }
 }
