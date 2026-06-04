@@ -363,5 +363,48 @@
             </LinearLayout>
         </LinearLayout>
 
+        <!-- Особые ингридиенты -->
+        <LinearLayout
+            android:id="@+id/SpecialIngredients"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textSpecialIngredients"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Количество особых ингридиентов"
+                android:textAlignment="center" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/minusButtonSpecialIngredients"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/button_minus" />
+
+                <TextView
+                    android:id="@+id/countSpecialIngredients"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textAlignment="center" />
+
+                <Button
+                    android:id="@+id/plusButtonSpecialIngredients"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/button_plus" />
+            </LinearLayout>
+        </LinearLayout>
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

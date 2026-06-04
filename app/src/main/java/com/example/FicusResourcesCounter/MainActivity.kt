@@ -168,5 +168,22 @@ class MainActivity : AppCompatActivity() {
         plusButtonCommonIngredients.setOnClickListener {
             countCommonIngredients?.setText((countCommonIngredients!!.text.toString().toInt() + 1).toString())
         }
+
+        // Особые ингридиенты
+        val countSpecialIngredients: TextView? = findViewById(R.id.countSpecialIngredients);
+        val minusButtonSpecialIngredients: Button = findViewById(R.id.minusButtonSpecialIngredients)
+        val plusButtonSpecialIngredients: Button = findViewById(R.id.plusButtonSpecialIngredients)
+
+        if (countSpecialIngredients?.text.toString() == "")
+            countSpecialIngredients?.setText(0.toString())
+
+        minusButtonSpecialIngredients.setOnClickListener {
+            countSpecialIngredients?.setText((countSpecialIngredients!!.text.toString().toInt() - 1).toString())
+            if (countSpecialIngredients?.text.toString().toInt() < 0)
+                countSpecialIngredients?.setText(0.toString())
+        }
+        plusButtonSpecialIngredients.setOnClickListener {
+            countSpecialIngredients?.setText((countSpecialIngredients!!.text.toString().toInt() + 1).toString())
+        }
     }
 }
