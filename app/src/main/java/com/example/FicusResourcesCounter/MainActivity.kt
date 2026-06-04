@@ -186,6 +186,25 @@ class MainActivity : AppCompatActivity() {
             countSpecialIngredients?.setText((countSpecialIngredients!!.text.toString().toInt() + 1).toString())
         }
 
+        // Инструмент маэстро
+        val countMaestrosInstrument: TextView? = findViewById(R.id.countMaestrosInstrument)
+        val minusButtonMaestrosInstrument: Button = findViewById(R.id.minusButtonMaestrosInstrument)
+        val plusButtonMaestrosInstrument: Button = findViewById(R.id.plusButtonMaestrosInstrument)
+
+        if (countMaestrosInstrument?.text.toString() == "")
+            countMaestrosInstrument?.setText(1.toString())
+
+        minusButtonMaestrosInstrument.setOnClickListener {
+            countMaestrosInstrument?.setText((countMaestrosInstrument!!.text.toString().toInt() - 1).toString())
+            if (countMaestrosInstrument?.text.toString().toInt() < 0)
+                countMaestrosInstrument?.setText(0.toString())
+        }
+        plusButtonMaestrosInstrument.setOnClickListener {
+            countMaestrosInstrument?.setText((countMaestrosInstrument!!.text.toString().toInt() + 1).toString())
+            if (countMaestrosInstrument?.text.toString().toInt() > 1)
+                countMaestrosInstrument?.setText(1.toString())
+        }
+
         // Кнопка "Новый день"
         val NewDayButton: Button = findViewById(R.id.NewDayButton)
 

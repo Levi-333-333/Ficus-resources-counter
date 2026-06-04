@@ -8,11 +8,11 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <!-- Кнопка нового дня -->
+
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="match_parent"
         android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
@@ -23,8 +23,8 @@
 
         <LinearLayout
             android:id="@+id/mainLayout"
-            android:layout_width="367dp"
-            android:layout_height="830dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:divider="@drawable/empty_spacer"
             android:orientation="vertical"
             android:showDividers="middle"
@@ -33,7 +33,6 @@
             app:layout_constraintStart_toStartOf="parent">
 
             <!-- ХП Фикуса -->
-
             <LinearLayout
                 android:id="@+id/FicusHP"
                 android:layout_width="match_parent"
@@ -420,9 +419,53 @@
                 </LinearLayout>
             </LinearLayout>
 
+            <!-- Инструмент маэстро -->
+            <LinearLayout
+                android:id="@+id/MaestrosInstrument"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textMaestrosInstrument"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Количество использований инструмента маэстро"
+                    android:textAlignment="center" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/minusButtonMaestrosInstrument"
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/button_minus" />
+
+                    <TextView
+                        android:id="@+id/countMaestrosInstrument"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text=""
+                        android:textAlignment="center" />
+
+                    <Button
+                        android:id="@+id/plusButtonMaestrosInstrument"
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/button_plus" />
+                </LinearLayout>
+            </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 
+    <!-- Кнопка нового дня -->
     <Button
         android:id="@+id/NewDayButton"
         android:layout_width="wrap_content"
