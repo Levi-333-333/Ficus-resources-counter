@@ -8,403 +8,430 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:id="@+id/mainLayout"
-        android:layout_width="367dp"
-        android:layout_height="830dp"
-        android:orientation="vertical"
-        android:divider="@drawable/empty_spacer"
-        android:showDividers="middle"
+    <!-- Кнопка нового дня -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" >
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <!-- ХП Фикуса -->
         <LinearLayout
-            android:id="@+id/FicusHP"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:id="@+id/mainLayout"
+            android:layout_width="367dp"
+            android:layout_height="830dp"
+            android:divider="@drawable/empty_spacer"
+            android:orientation="vertical"
+            android:showDividers="middle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
 
-            <TextView
-                android:id="@+id/textFicusHP"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Хиты Фикуса"
-                android:textAlignment="center" />
+            <!-- ХП Фикуса -->
 
             <LinearLayout
+                android:id="@+id/FicusHP"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/minusButtonFicusHP"
-                    android:layout_width="1dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/button_minus" />
+                android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/countFicusHP"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text=""
+                    android:id="@+id/textFicusHP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Хиты Фикуса"
                     android:textAlignment="center" />
 
-                <Button
-                    android:id="@+id/plusButtonFicusHP"
-                    android:layout_width="1dp"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/button_plus" />
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/minusButtonFicusHP"
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/button_minus" />
+
+                    <TextView
+                        android:id="@+id/countFicusHP"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text=""
+                        android:textAlignment="center" />
+
+                    <Button
+                        android:id="@+id/plusButtonFicusHP"
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/button_plus" />
+                </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
 
-        <!-- ХП Совомеда -->
-        <LinearLayout
-            android:id="@+id/OwlbearHP"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textOwlbearHP"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Хиты Совомеда"
-                android:textAlignment="center" />
-
+            <!-- ХП Совомеда -->
             <LinearLayout
+                android:id="@+id/OwlbearHP"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/minusButtonOwlbearHP"
-                    android:layout_width="1dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/button_minus" />
+                android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/countOwlbearHP"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text=""
+                    android:id="@+id/textOwlbearHP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Хиты Совомеда"
                     android:textAlignment="center" />
 
-                <Button
-                    android:id="@+id/plusButtonOwlbearHP"
-                    android:layout_width="1dp"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/button_plus" />
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/minusButtonOwlbearHP"
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/button_minus" />
+
+                    <TextView
+                        android:id="@+id/countOwlbearHP"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text=""
+                        android:textAlignment="center" />
+
+                    <Button
+                        android:id="@+id/plusButtonOwlbearHP"
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/button_plus" />
+                </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
 
-        <!-- Ячейки первого уровня -->
-        <LinearLayout
-            android:id="@+id/SpellI"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textSpellI"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Количество ячеек первого уровня"
-                android:textAlignment="center" />
-
+            <!-- Ячейки первого уровня -->
             <LinearLayout
+                android:id="@+id/SpellI"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/minusButtonSpellI"
-                    android:layout_width="1dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/button_minus" />
+                android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/countSpellI"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text=""
+                    android:id="@+id/textSpellI"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Количество ячеек первого уровня"
                     android:textAlignment="center" />
 
-                <Button
-                    android:id="@+id/plusButtonSpellI"
-                    android:layout_width="1dp"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/button_plus" />
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/minusButtonSpellI"
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/button_minus" />
+
+                    <TextView
+                        android:id="@+id/countSpellI"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text=""
+                        android:textAlignment="center" />
+
+                    <Button
+                        android:id="@+id/plusButtonSpellI"
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/button_plus" />
+                </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
 
-        <!-- Ячейки второго уровня -->
-        <LinearLayout
-            android:id="@+id/SpellII"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textSpellII"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Количество ячеек второго уровня"
-                android:textAlignment="center" />
-
+            <!-- Ячейки второго уровня -->
             <LinearLayout
+                android:id="@+id/SpellII"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/minusButtonSpellII"
-                    android:layout_width="1dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/button_minus" />
+                android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/countSpellII"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text=""
+                    android:id="@+id/textSpellII"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Количество ячеек второго уровня"
                     android:textAlignment="center" />
 
-                <Button
-                    android:id="@+id/plusButtonSpellII"
-                    android:layout_width="1dp"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/button_plus" />
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/minusButtonSpellII"
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/button_minus" />
+
+                    <TextView
+                        android:id="@+id/countSpellII"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text=""
+                        android:textAlignment="center" />
+
+                    <Button
+                        android:id="@+id/plusButtonSpellII"
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/button_plus" />
+                </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
 
-        <!-- Ячейки третьего уровня -->
-        <LinearLayout
-            android:id="@+id/SpellIII"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textSpellIII"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Количество ячеек третьего уровня"
-                android:textAlignment="center" />
-
+            <!-- Ячейки третьего уровня -->
             <LinearLayout
+                android:id="@+id/SpellIII"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/minusButtonSpellIII"
-                    android:layout_width="1dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/button_minus" />
+                android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/countSpellIII"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text=""
+                    android:id="@+id/textSpellIII"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Количество ячеек третьего уровня"
                     android:textAlignment="center" />
 
-                <Button
-                    android:id="@+id/plusButtonSpellIII"
-                    android:layout_width="1dp"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/button_plus" />
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/minusButtonSpellIII"
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/button_minus" />
+
+                    <TextView
+                        android:id="@+id/countSpellIII"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text=""
+                        android:textAlignment="center" />
+
+                    <Button
+                        android:id="@+id/plusButtonSpellIII"
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/button_plus" />
+                </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
 
-        <!-- Ячейки фокальных заклинаний уровня -->
-        <LinearLayout
-            android:id="@+id/FocalSpell"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textFocalSpell"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Количество ячеек фокальных заклинаний"
-                android:textAlignment="center" />
-
+            <!-- Ячейки фокальных заклинаний уровня -->
             <LinearLayout
+                android:id="@+id/FocalSpell"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/minusButtonFocalSpell"
-                    android:layout_width="1dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/button_minus" />
+                android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/countFocalSpell"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text=""
+                    android:id="@+id/textFocalSpell"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Количество ячеек фокальных заклинаний"
                     android:textAlignment="center" />
 
-                <Button
-                    android:id="@+id/plusButtonFocalSpell"
-                    android:layout_width="1dp"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/button_plus" />
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/minusButtonFocalSpell"
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/button_minus" />
+
+                    <TextView
+                        android:id="@+id/countFocalSpell"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text=""
+                        android:textAlignment="center" />
+
+                    <Button
+                        android:id="@+id/plusButtonFocalSpell"
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/button_plus" />
+                </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
 
-        <!-- Фрукты Фикуса -->
-        <LinearLayout
-            android:id="@+id/FicusFruits"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textFicusFruits"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Количество фруктов у Фикуса"
-                android:textAlignment="center" />
-
+            <!-- Фрукты Фикуса -->
             <LinearLayout
+                android:id="@+id/FicusFruits"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/minusButtonFicusFruits"
-                    android:layout_width="1dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/button_minus" />
+                android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/countFicusFruits"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text=""
+                    android:id="@+id/textFicusFruits"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Количество фруктов у Фикуса"
                     android:textAlignment="center" />
 
-                <Button
-                    android:id="@+id/plusButtonFicusFruits"
-                    android:layout_width="1dp"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/button_plus" />
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/minusButtonFicusFruits"
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/button_minus" />
+
+                    <TextView
+                        android:id="@+id/countFicusFruits"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text=""
+                        android:textAlignment="center" />
+
+                    <Button
+                        android:id="@+id/plusButtonFicusFruits"
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/button_plus" />
+                </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
 
-        <!-- Обычные ингридиенты -->
-        <LinearLayout
-            android:id="@+id/CommonIngredients"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textCommonIngredients"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Количество обычных ингридиентов"
-                android:textAlignment="center" />
-
+            <!-- Обычные ингридиенты -->
             <LinearLayout
+                android:id="@+id/CommonIngredients"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/minusButtonCommonIngredients"
-                    android:layout_width="1dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/button_minus" />
+                android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/countCommonIngredients"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text=""
+                    android:id="@+id/textCommonIngredients"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Количество обычных ингридиентов"
                     android:textAlignment="center" />
 
-                <Button
-                    android:id="@+id/plusButtonCommonIngredients"
-                    android:layout_width="1dp"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/button_plus" />
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/minusButtonCommonIngredients"
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/button_minus" />
+
+                    <TextView
+                        android:id="@+id/countCommonIngredients"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text=""
+                        android:textAlignment="center" />
+
+                    <Button
+                        android:id="@+id/plusButtonCommonIngredients"
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/button_plus" />
+                </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
 
-        <!-- Особые ингридиенты -->
-        <LinearLayout
-            android:id="@+id/SpecialIngredients"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textSpecialIngredients"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Количество особых ингридиентов"
-                android:textAlignment="center" />
-
+            <!-- Особые ингридиенты -->
             <LinearLayout
+                android:id="@+id/SpecialIngredients"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/minusButtonSpecialIngredients"
-                    android:layout_width="1dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/button_minus" />
+                android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/countSpecialIngredients"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text=""
+                    android:id="@+id/textSpecialIngredients"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Количество особых ингридиентов"
                     android:textAlignment="center" />
 
-                <Button
-                    android:id="@+id/plusButtonSpecialIngredients"
-                    android:layout_width="1dp"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/button_plus" />
-            </LinearLayout>
-        </LinearLayout>
+                    android:orientation="horizontal">
 
-    </LinearLayout>
+                    <Button
+                        android:id="@+id/minusButtonSpecialIngredients"
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/button_minus" />
+
+                    <TextView
+                        android:id="@+id/countSpecialIngredients"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text=""
+                        android:textAlignment="center" />
+
+                    <Button
+                        android:id="@+id/plusButtonSpecialIngredients"
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/button_plus" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/NewDayButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:text="Новый день"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

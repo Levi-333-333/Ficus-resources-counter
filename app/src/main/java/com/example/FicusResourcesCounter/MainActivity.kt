@@ -170,7 +170,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         // Особые ингридиенты
-        val countSpecialIngredients: TextView? = findViewById(R.id.countSpecialIngredients);
+        val countSpecialIngredients: TextView? = findViewById(R.id.countSpecialIngredients)
         val minusButtonSpecialIngredients: Button = findViewById(R.id.minusButtonSpecialIngredients)
         val plusButtonSpecialIngredients: Button = findViewById(R.id.plusButtonSpecialIngredients)
 
@@ -184,6 +184,24 @@ class MainActivity : AppCompatActivity() {
         }
         plusButtonSpecialIngredients.setOnClickListener {
             countSpecialIngredients?.setText((countSpecialIngredients!!.text.toString().toInt() + 1).toString())
+        }
+
+        // Кнопка "Новый день"
+        val NewDayButton: Button = findViewById(R.id.NewDayButton)
+
+        NewDayButton.setOnClickListener {
+            // Хиты
+            countFicusHP?.setText(MAX_FICUS_HP_COUNT.toString())
+            countOwlbearHP?.setText(MAX_OWLBEAR_HP_COUNT.toString())
+            // Заклинания
+            countSpellI?.setText(MAX_SPELL_I_COUNT.toString())
+            countSpellII?.setText(MAX_SPELL_II_COUNT.toString())
+            countSpellIII?.setText(MAX_SPELL_III_COUNT.toString())
+            countFocalSpell?.setText(MAX_FOCAL_SPELL_COUNT.toString())
+            // Фрукты
+            countFicusFruits?.setText((countFicusFruits.text.toString().toInt() + 1).toString())
+            if (countFicusFruits?.text.toString().toInt() > MAX_FICUS_FRUITS)
+                countFicusFruits?.setText(MAX_FICUS_FRUITS.toString())
         }
     }
 }
