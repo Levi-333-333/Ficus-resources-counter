@@ -10,13 +10,14 @@
 
     <LinearLayout
         android:id="@+id/mainLayout"
-        android:layout_width="392dp"
-        android:layout_height="867dp"
+        android:layout_width="367dp"
+        android:layout_height="830dp"
         android:orientation="vertical"
+        android:divider="@drawable/empty_spacer"
+        android:showDividers="middle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintStart_toStartOf="parent" >
 
         <!-- ХП Фикуса -->
         <LinearLayout
@@ -29,7 +30,8 @@
                 android:id="@+id/textFicusHP"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Хиты Фикуса" />
+                android:text="Хиты Фикуса"
+                android:textAlignment="center" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -38,7 +40,7 @@
 
                 <Button
                     android:id="@+id/minusButtonFicusHP"
-                    android:layout_width="wrap_content"
+                    android:layout_width="1dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/button_minus" />
@@ -48,11 +50,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="" />
+                    android:text=""
+                    android:textAlignment="center" />
 
                 <Button
                     android:id="@+id/plusButtonFicusHP"
-                    android:layout_width="wrap_content"
+                    android:layout_width="1dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/button_plus" />
@@ -70,7 +73,8 @@
                 android:id="@+id/textOwlbearHP"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Хиты Совомеда" />
+                android:text="Хиты Совомеда"
+                android:textAlignment="center" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -79,7 +83,7 @@
 
                 <Button
                     android:id="@+id/minusButtonOwlbearHP"
-                    android:layout_width="wrap_content"
+                    android:layout_width="1dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/button_minus" />
@@ -89,11 +93,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="" />
+                    android:text=""
+                    android:textAlignment="center" />
 
                 <Button
                     android:id="@+id/plusButtonOwlbearHP"
-                    android:layout_width="wrap_content"
+                    android:layout_width="1dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/button_plus" />
@@ -111,7 +116,8 @@
                 android:id="@+id/textSpellI"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Количество ячеек первого уровня" />
+                android:text="Количество ячеек первого уровня"
+                android:textAlignment="center" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -120,7 +126,7 @@
 
                 <Button
                     android:id="@+id/minusButtonSpellI"
-                    android:layout_width="wrap_content"
+                    android:layout_width="1dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/button_minus" />
@@ -130,11 +136,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="" />
+                    android:text=""
+                    android:textAlignment="center" />
 
                 <Button
                     android:id="@+id/plusButtonSpellI"
-                    android:layout_width="wrap_content"
+                    android:layout_width="1dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/button_plus" />
@@ -152,7 +159,8 @@
                 android:id="@+id/textSpellII"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Количество ячеек второго уровня" />
+                android:text="Количество ячеек второго уровня"
+                android:textAlignment="center" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -161,7 +169,7 @@
 
                 <Button
                     android:id="@+id/minusButtonSpellII"
-                    android:layout_width="wrap_content"
+                    android:layout_width="1dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/button_minus" />
@@ -171,11 +179,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="" />
+                    android:text=""
+                    android:textAlignment="center" />
 
                 <Button
                     android:id="@+id/plusButtonSpellII"
-                    android:layout_width="wrap_content"
+                    android:layout_width="1dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/button_plus" />
@@ -193,7 +202,8 @@
                 android:id="@+id/textSpellIII"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Количество ячеек третьего уровня" />
+                android:text="Количество ячеек третьего уровня"
+                android:textAlignment="center" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -202,7 +212,7 @@
 
                 <Button
                     android:id="@+id/minusButtonSpellIII"
-                    android:layout_width="wrap_content"
+                    android:layout_width="1dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/button_minus" />
@@ -212,11 +222,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="" />
+                    android:text=""
+                    android:textAlignment="center" />
 
                 <Button
                     android:id="@+id/plusButtonSpellIII"
-                    android:layout_width="wrap_content"
+                    android:layout_width="1dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/button_plus" />
@@ -234,7 +245,8 @@
                 android:id="@+id/textFocalSpell"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Количество ячеек фокальных заклинаний" />
+                android:text="Количество ячеек фокальных заклинаний"
+                android:textAlignment="center" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -243,7 +255,7 @@
 
                 <Button
                     android:id="@+id/minusButtonFocalSpell"
-                    android:layout_width="wrap_content"
+                    android:layout_width="1dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/button_minus" />
@@ -253,11 +265,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="" />
+                    android:text=""
+                    android:textAlignment="center" />
 
                 <Button
                     android:id="@+id/plusButtonFocalSpell"
-                    android:layout_width="wrap_content"
+                    android:layout_width="1dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/button_plus" />
@@ -275,7 +288,8 @@
                 android:id="@+id/textFicusFruits"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Количество фруктов у Фикуса" />
+                android:text="Количество фруктов у Фикуса"
+                android:textAlignment="center" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -284,7 +298,7 @@
 
                 <Button
                     android:id="@+id/minusButtonFicusFruits"
-                    android:layout_width="wrap_content"
+                    android:layout_width="1dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/button_minus" />
@@ -294,11 +308,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="" />
+                    android:text=""
+                    android:textAlignment="center" />
 
                 <Button
                     android:id="@+id/plusButtonFicusFruits"
-                    android:layout_width="wrap_content"
+                    android:layout_width="1dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/button_plus" />
