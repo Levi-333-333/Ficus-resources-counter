@@ -221,6 +221,8 @@ class MainActivity : AppCompatActivity() {
             countFicusFruits?.setText((countFicusFruits.text.toString().toInt() + 1).toString())
             if (countFicusFruits?.text.toString().toInt() > MAX_FICUS_FRUITS)
                 countFicusFruits?.setText(MAX_FICUS_FRUITS.toString())
+            // Восстанавливающиеся расходники
+            countMaestrosInstrument?.setText(1.toString())
         }
     }
 }
