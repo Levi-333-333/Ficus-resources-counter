@@ -9,6 +9,48 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
+    private val countFicusHP: TextView? = findViewById(R.id.countFicusHP);
+    private val minusButtonFicusHP: Button = findViewById(R.id.minusButtonFicusHP)
+    private val plusButtonFicusHP: Button = findViewById(R.id.plusButtonFicusHP)
+
+    private val countOwlbearHP: TextView? = findViewById(R.id.countOwlbearHP);
+    private val minusButtonOwlbearHP: Button = findViewById(R.id.minusButtonOwlbearHP)
+    private val plusButtonOwlbearHP: Button = findViewById(R.id.plusButtonOwlbearHP)
+
+    private val countSpellI: TextView? = findViewById(R.id.countSpellI);
+    private val minusButtonSpellI: Button = findViewById(R.id.minusButtonSpellI)
+    private val plusButtonSpellI: Button = findViewById(R.id.plusButtonSpellI)
+
+    private val countSpellII: TextView? = findViewById(R.id.countSpellII);
+    private val minusButtonSpellII: Button = findViewById(R.id.minusButtonSpellII)
+    private val plusButtonSpellII: Button = findViewById(R.id.plusButtonSpellII)
+
+    private val countSpellIII: TextView? = findViewById(R.id.countSpellIII);
+    private val minusButtonSpellIII: Button = findViewById(R.id.minusButtonSpellIII)
+    private val plusButtonSpellIII: Button = findViewById(R.id.plusButtonSpellIII)
+
+    private val countFocalSpell: TextView? = findViewById(R.id.countFocalSpell);
+    private val minusButtonFocalSpell: Button = findViewById(R.id.minusButtonFocalSpell)
+    private val plusButtonFocalSpell: Button = findViewById(R.id.plusButtonFocalSpell)
+
+    private val countFicusFruits: TextView? = findViewById(R.id.countFicusFruits);
+    private val minusButtonFicusFruits: Button = findViewById(R.id.minusButtonFicusFruits)
+    private val plusButtonFicusFruits: Button = findViewById(R.id.plusButtonFicusFruits)
+
+    val countCommonIngredients: TextView? = findViewById(R.id.countCommonIngredients);
+    val minusButtonCommonIngredients: Button = findViewById(R.id.minusButtonCommonIngredients)
+    val plusButtonCommonIngredients: Button = findViewById(R.id.plusButtonCommonIngredients)
+
+    private val countSpecialIngredients: TextView? = findViewById(R.id.countSpecialIngredients)
+    private val minusButtonSpecialIngredients: Button = findViewById(R.id.minusButtonSpecialIngredients)
+    private val plusButtonSpecialIngredients: Button = findViewById(R.id.plusButtonSpecialIngredients)
+
+    private val countMaestrosInstrument: TextView? = findViewById(R.id.countMaestrosInstrument)
+    private val minusButtonMaestrosInstrument: Button = findViewById(R.id.minusButtonMaestrosInstrument)
+    private val plusButtonMaestrosInstrument: Button = findViewById(R.id.plusButtonMaestrosInstrument)
+
+    private val NewDayButton: Button = findViewById(R.id.NewDayButton)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -20,10 +62,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         // ХП Фикуса
-        val countFicusHP: TextView? = findViewById(R.id.countFicusHP);
-        val minusButtonFicusHP: Button = findViewById(R.id.minusButtonFicusHP)
-        val plusButtonFicusHP: Button = findViewById(R.id.plusButtonFicusHP)
-
         if (countFicusHP?.text.toString() == "")
             countFicusHP?.setText(MAX_FICUS_HP_COUNT.toString())
 
@@ -39,10 +77,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         // ХП Совомеда
-        val countOwlbearHP: TextView? = findViewById(R.id.countOwlbearHP);
-        val minusButtonOwlbearHP: Button = findViewById(R.id.minusButtonOwlbearHP)
-        val plusButtonOwlbearHP: Button = findViewById(R.id.plusButtonOwlbearHP)
-
         if (countOwlbearHP?.text.toString() == "")
             countOwlbearHP?.setText(MAX_OWLBEAR_HP_COUNT.toString())
 
@@ -58,10 +92,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         // Ячейки первого уровня
-        val countSpellI: TextView? = findViewById(R.id.countSpellI);
-        val minusButtonSpellI: Button = findViewById(R.id.minusButtonSpellI)
-        val plusButtonSpellI: Button = findViewById(R.id.plusButtonSpellI)
-
         if (countSpellI?.text.toString() == "")
             countSpellI?.setText(MAX_SPELL_I_COUNT.toString())
 
@@ -77,10 +107,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         // Ячейки второго уровня
-        val countSpellII: TextView? = findViewById(R.id.countSpellII);
-        val minusButtonSpellII: Button = findViewById(R.id.minusButtonSpellII)
-        val plusButtonSpellII: Button = findViewById(R.id.plusButtonSpellII)
-
         if (countSpellII?.text.toString() == "")
             countSpellII?.setText(MAX_SPELL_II_COUNT.toString())
 
@@ -96,10 +122,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         // Ячейки третьего уровня
-        val countSpellIII: TextView? = findViewById(R.id.countSpellIII);
-        val minusButtonSpellIII: Button = findViewById(R.id.minusButtonSpellIII)
-        val plusButtonSpellIII: Button = findViewById(R.id.plusButtonSpellIII)
-
         if (countSpellIII?.text.toString() == "")
             countSpellIII?.setText(MAX_SPELL_III_COUNT.toString())
 
@@ -115,10 +137,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         // Ячейки фокальных заклинаний
-        val countFocalSpell: TextView? = findViewById(R.id.countFocalSpell);
-        val minusButtonFocalSpell: Button = findViewById(R.id.minusButtonFocalSpell)
-        val plusButtonFocalSpell: Button = findViewById(R.id.plusButtonFocalSpell)
-
         if (countFocalSpell?.text.toString() == "")
             countFocalSpell?.setText(MAX_FOCAL_SPELL_COUNT.toString())
 
@@ -134,10 +152,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         // Фрукты Фикуса
-        val countFicusFruits: TextView? = findViewById(R.id.countFicusFruits);
-        val minusButtonFicusFruits: Button = findViewById(R.id.minusButtonFicusFruits)
-        val plusButtonFicusFruits: Button = findViewById(R.id.plusButtonFicusFruits)
-
         if (countFicusFruits?.text.toString() == "")
             countFicusFruits?.setText(MAX_FICUS_FRUITS.toString())
 
@@ -153,10 +167,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         // Обычные ингридиенты
-        val countCommonIngredients: TextView? = findViewById(R.id.countCommonIngredients);
-        val minusButtonCommonIngredients: Button = findViewById(R.id.minusButtonCommonIngredients)
-        val plusButtonCommonIngredients: Button = findViewById(R.id.plusButtonCommonIngredients)
-
         if (countCommonIngredients?.text.toString() == "")
             countCommonIngredients?.setText(0.toString())
 
@@ -170,10 +180,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         // Особые ингридиенты
-        val countSpecialIngredients: TextView? = findViewById(R.id.countSpecialIngredients)
-        val minusButtonSpecialIngredients: Button = findViewById(R.id.minusButtonSpecialIngredients)
-        val plusButtonSpecialIngredients: Button = findViewById(R.id.plusButtonSpecialIngredients)
-
         if (countSpecialIngredients?.text.toString() == "")
             countSpecialIngredients?.setText(0.toString())
 
@@ -187,10 +193,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         // Инструмент маэстро
-        val countMaestrosInstrument: TextView? = findViewById(R.id.countMaestrosInstrument)
-        val minusButtonMaestrosInstrument: Button = findViewById(R.id.minusButtonMaestrosInstrument)
-        val plusButtonMaestrosInstrument: Button = findViewById(R.id.plusButtonMaestrosInstrument)
-
         if (countMaestrosInstrument?.text.toString() == "")
             countMaestrosInstrument?.setText(1.toString())
 
@@ -206,8 +208,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         // Кнопка "Новый день"
-        val NewDayButton: Button = findViewById(R.id.NewDayButton)
-
         NewDayButton.setOnClickListener {
             // Хиты
             countFicusHP?.setText(MAX_FICUS_HP_COUNT.toString())
