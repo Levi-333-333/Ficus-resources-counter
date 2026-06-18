@@ -9,47 +9,47 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
-    private val countFicusHP: TextView? = findViewById(R.id.countFicusHP);
-    private val minusButtonFicusHP: Button = findViewById(R.id.minusButtonFicusHP)
-    private val plusButtonFicusHP: Button = findViewById(R.id.plusButtonFicusHP)
+    private lateinit var countFicusHP: TextView
+    private lateinit var minusButtonFicusHP: Button
+    private lateinit var plusButtonFicusHP: Button
 
-    private val countOwlbearHP: TextView? = findViewById(R.id.countOwlbearHP);
-    private val minusButtonOwlbearHP: Button = findViewById(R.id.minusButtonOwlbearHP)
-    private val plusButtonOwlbearHP: Button = findViewById(R.id.plusButtonOwlbearHP)
+    private lateinit var countOwlbearHP: TextView
+    private lateinit var minusButtonOwlbearHP: Button
+    private lateinit var plusButtonOwlbearHP: Button
 
-    private val countSpellI: TextView? = findViewById(R.id.countSpellI);
-    private val minusButtonSpellI: Button = findViewById(R.id.minusButtonSpellI)
-    private val plusButtonSpellI: Button = findViewById(R.id.plusButtonSpellI)
+    private lateinit var countSpellI: TextView
+    private lateinit var minusButtonSpellI: Button
+    private lateinit var plusButtonSpellI: Button
 
-    private val countSpellII: TextView? = findViewById(R.id.countSpellII);
-    private val minusButtonSpellII: Button = findViewById(R.id.minusButtonSpellII)
-    private val plusButtonSpellII: Button = findViewById(R.id.plusButtonSpellII)
+    private lateinit var countSpellII: TextView
+    private lateinit var minusButtonSpellII: Button
+    private lateinit var plusButtonSpellII: Button
 
-    private val countSpellIII: TextView? = findViewById(R.id.countSpellIII);
-    private val minusButtonSpellIII: Button = findViewById(R.id.minusButtonSpellIII)
-    private val plusButtonSpellIII: Button = findViewById(R.id.plusButtonSpellIII)
+    private lateinit var countSpellIII: TextView
+    private lateinit var minusButtonSpellIII: Button
+    private lateinit var plusButtonSpellIII: Button
 
-    private val countFocalSpell: TextView? = findViewById(R.id.countFocalSpell);
-    private val minusButtonFocalSpell: Button = findViewById(R.id.minusButtonFocalSpell)
-    private val plusButtonFocalSpell: Button = findViewById(R.id.plusButtonFocalSpell)
+    private lateinit var countFocalSpell: TextView
+    private lateinit var minusButtonFocalSpell: Button
+    private lateinit var plusButtonFocalSpell: Button
 
-    private val countFicusFruits: TextView? = findViewById(R.id.countFicusFruits);
-    private val minusButtonFicusFruits: Button = findViewById(R.id.minusButtonFicusFruits)
-    private val plusButtonFicusFruits: Button = findViewById(R.id.plusButtonFicusFruits)
+    private lateinit var countFicusFruits: TextView
+    private lateinit var minusButtonFicusFruits: Button
+    private lateinit var plusButtonFicusFruits: Button
 
-    val countCommonIngredients: TextView? = findViewById(R.id.countCommonIngredients);
-    val minusButtonCommonIngredients: Button = findViewById(R.id.minusButtonCommonIngredients)
-    val plusButtonCommonIngredients: Button = findViewById(R.id.plusButtonCommonIngredients)
+    private lateinit var countCommonIngredients: TextView
+    private lateinit var minusButtonCommonIngredients: Button
+    private lateinit var plusButtonCommonIngredients: Button
 
-    private val countSpecialIngredients: TextView? = findViewById(R.id.countSpecialIngredients)
-    private val minusButtonSpecialIngredients: Button = findViewById(R.id.minusButtonSpecialIngredients)
-    private val plusButtonSpecialIngredients: Button = findViewById(R.id.plusButtonSpecialIngredients)
+    private lateinit var countSpecialIngredients: TextView
+    private lateinit var minusButtonSpecialIngredients: Button
+    private lateinit var plusButtonSpecialIngredients: Button
 
-    private val countMaestrosInstrument: TextView? = findViewById(R.id.countMaestrosInstrument)
-    private val minusButtonMaestrosInstrument: Button = findViewById(R.id.minusButtonMaestrosInstrument)
-    private val plusButtonMaestrosInstrument: Button = findViewById(R.id.plusButtonMaestrosInstrument)
+    private lateinit var countMaestrosInstrument: TextView
+    private lateinit var minusButtonMaestrosInstrument: Button
+    private lateinit var plusButtonMaestrosInstrument: Button
 
-    private val NewDayButton: Button = findViewById(R.id.NewDayButton)
+    private lateinit var NewDayButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -60,6 +60,49 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        // Инициализация полей
+        countFicusHP = findViewById(R.id.countFicusHP)
+        minusButtonFicusHP = findViewById(R.id.minusButtonFicusHP)
+        plusButtonFicusHP = findViewById(R.id.plusButtonFicusHP)
+
+        countOwlbearHP = findViewById(R.id.countOwlbearHP)
+        minusButtonOwlbearHP = findViewById(R.id.minusButtonOwlbearHP)
+        plusButtonOwlbearHP = findViewById(R.id.plusButtonOwlbearHP)
+
+        countSpellI = findViewById(R.id.countSpellI)
+        minusButtonSpellI = findViewById(R.id.minusButtonSpellI)
+        plusButtonSpellI = findViewById(R.id.plusButtonSpellI)
+
+        countSpellII = findViewById(R.id.countSpellII)
+        minusButtonSpellII = findViewById(R.id.minusButtonSpellII)
+        plusButtonSpellII = findViewById(R.id.plusButtonSpellII)
+
+        countSpellIII = findViewById(R.id.countSpellIII)
+        minusButtonSpellIII = findViewById(R.id.minusButtonSpellIII)
+        plusButtonSpellIII = findViewById(R.id.plusButtonSpellIII)
+
+        countFocalSpell = findViewById(R.id.countFocalSpell)
+        minusButtonFocalSpell = findViewById(R.id.minusButtonFocalSpell)
+        plusButtonFocalSpell = findViewById(R.id.plusButtonFocalSpell)
+
+        countFicusFruits = findViewById(R.id.countFicusFruits)
+        minusButtonFicusFruits = findViewById(R.id.minusButtonFicusFruits)
+        plusButtonFicusFruits = findViewById(R.id.plusButtonFicusFruits)
+
+        countCommonIngredients = findViewById(R.id.countCommonIngredients)
+        minusButtonCommonIngredients = findViewById(R.id.minusButtonCommonIngredients)
+        plusButtonCommonIngredients = findViewById(R.id.plusButtonCommonIngredients)
+
+        countSpecialIngredients = findViewById(R.id.countSpecialIngredients)
+        minusButtonSpecialIngredients = findViewById(R.id.minusButtonSpecialIngredients)
+        plusButtonSpecialIngredients = findViewById(R.id.plusButtonSpecialIngredients)
+
+        countMaestrosInstrument = findViewById(R.id.countMaestrosInstrument)
+        minusButtonMaestrosInstrument = findViewById(R.id.minusButtonMaestrosInstrument)
+        plusButtonMaestrosInstrument = findViewById(R.id.plusButtonMaestrosInstrument)
+
+        NewDayButton = findViewById(R.id.NewDayButton)
 
         // ХП Фикуса
         if (countFicusHP?.text.toString() == "")
