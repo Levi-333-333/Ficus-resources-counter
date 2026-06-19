@@ -375,7 +375,7 @@
                         android:id="@+id/textCommonIngredients"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Количество обычных ингридиентов"
+                        android:text="Количество обычных ингредиентов"
                         android:textAlignment="center" />
 
                     <LinearLayout
@@ -418,7 +418,7 @@
                         android:id="@+id/textSpecialIngredients"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Количество особых ингридиентов"
+                        android:text="Количество особых ингредиентов"
                         android:textAlignment="center" />
 
                     <LinearLayout

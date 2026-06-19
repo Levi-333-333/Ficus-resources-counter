@@ -1,5 +1,6 @@
 package com.example.FicusResourcesCounter
 
+import android.content.Context
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -7,6 +8,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
+import java.io.File
 
 class MainActivity : AppCompatActivity() {
     private lateinit var countFicusHP: TextView
@@ -50,6 +54,47 @@ class MainActivity : AppCompatActivity() {
     private lateinit var plusButtonMaestrosInstrument: Button
 
     private lateinit var NewDayButton: Button
+    private lateinit var SaveButton: Button
+
+    private val gson = Gson()
+
+    private fun getCounterMap(): Map<String, TextView> = mapOf(
+        "countFicusHP" to countFicusHP,
+        "countOwlbearHP" to countOwlbearHP,
+        "countSpellI" to countSpellI,
+        "countSpellII" to countSpellII,
+        "countSpellIII" to countSpellIII,
+        "countFocalSpell" to countFocalSpell,
+        "countFicusFruits" to countFicusFruits,
+        "countCommonIngredients" to countCommonIngredients,
+        "countSpecialIngredients" to countSpecialIngredients,
+        "countMaestrosInstrument" to countMaestrosInstrument
+    )
+
+    private fun saveProgramm(context: Context) {
+        val mapForJson: MutableMap<String, Int> = mutableMapOf()
+
+        for ((key, textView) in getCounterMap()) {
+            val value = textView.text.toString().toInt()
+            mapForJson.put(key, value)
+        }
+        val json = gson.toJson(mapForJson)
+
+        val file = File(context.filesDir, "save.json")
+        file.writeText(json)
+    }
+    private fun loadProgramm(context: Context) {
+        val file = File(context.filesDir, "save.json")
+        if (!file.exists()) return
+
+        val json = file.readText()
+        val mapType = object : TypeToken<Map<String, Int>>() {}.type
+        val mapFromJson = gson.fromJson<Map<String, Int>>(json, mapType)
+
+        for ((key, textView) in getCounterMap()) {
+            mapFromJson[key].let {value -> textView.setText(value.toString())}
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -103,6 +148,10 @@ class MainActivity : AppCompatActivity() {
         plusButtonMaestrosInstrument = findViewById(R.id.plusButtonMaestrosInstrument)
 
         NewDayButton = findViewById(R.id.NewDayButton)
+        SaveButton = findViewById(R.id.SaveButton)
+
+        // Загрузка программы
+        loadProgramm(this)
 
         // ХП Фикуса
         if (countFicusHP?.text.toString() == "")
@@ -266,6 +315,11 @@ class MainActivity : AppCompatActivity() {
                 countFicusFruits?.setText(MAX_FICUS_FRUITS.toString())
             // Восстанавливающиеся расходники
             countMaestrosInstrument?.setText(1.toString())
+        }
+
+        //Кнопка "Сохранить"
+        SaveButton.setOnClickListener {
+            saveProgramm(this)
         }
     }
 }
