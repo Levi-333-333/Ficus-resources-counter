@@ -117,7 +117,7 @@
                         android:id="@+id/textOwlbearHP"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Хиты Совомеда"
+                        android:text="Хиты Бари"
                         android:textAlignment="center" />
 
                     <LinearLayout
