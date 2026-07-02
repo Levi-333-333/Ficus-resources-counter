@@ -97,7 +97,7 @@ class MainActivity : AppCompatActivity() {
         val mapFromJson = gson.fromJson<Map<String, Int>>(json, mapType)
 
         for ((key, textView) in getCounterMap()) {
-            mapFromJson[key].let {value -> textView.setText(value.toString())}
+            mapFromJson[key]?.let {value -> textView.setText(value.toString())}
         }
     }
 
@@ -332,7 +332,7 @@ class MainActivity : AppCompatActivity() {
             countSpellI?.setText(MAX_SPELL_I_COUNT.toString())
             countSpellII?.setText(MAX_SPELL_II_COUNT.toString())
             countSpellIII?.setText(MAX_SPELL_III_COUNT.toString())
-            countSpellIV?.setText(MAX_SPELL_III_COUNT.toString())
+            countSpellIV?.setText(MAX_SPELL_IV_COUNT.toString())
             countFocalSpell?.setText(MAX_FOCAL_SPELL_COUNT.toString())
             // Фрукты
             countFicusFruits?.setText((countFicusFruits.text.toString().toInt() + 1).toString())
