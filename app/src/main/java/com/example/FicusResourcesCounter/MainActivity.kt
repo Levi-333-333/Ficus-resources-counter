@@ -33,6 +33,10 @@ class MainActivity : AppCompatActivity() {
     private lateinit var minusButtonSpellIII: Button
     private lateinit var plusButtonSpellIII: Button
 
+    private lateinit var countSpellIV: TextView
+    private lateinit var minusButtonSpellIV: Button
+    private lateinit var plusButtonSpellIV: Button
+
     private lateinit var countFocalSpell: TextView
     private lateinit var minusButtonFocalSpell: Button
     private lateinit var plusButtonFocalSpell: Button
@@ -64,6 +68,7 @@ class MainActivity : AppCompatActivity() {
         "countSpellI" to countSpellI,
         "countSpellII" to countSpellII,
         "countSpellIII" to countSpellIII,
+        "countSpellIV" to countSpellIV,
         "countFocalSpell" to countFocalSpell,
         "countFicusFruits" to countFicusFruits,
         "countCommonIngredients" to countCommonIngredients,
@@ -126,6 +131,10 @@ class MainActivity : AppCompatActivity() {
         countSpellIII = findViewById(R.id.countSpellIII)
         minusButtonSpellIII = findViewById(R.id.minusButtonSpellIII)
         plusButtonSpellIII = findViewById(R.id.plusButtonSpellIII)
+
+        countSpellIV = findViewById(R.id.countSpellIV)
+        minusButtonSpellIV = findViewById(R.id.minusButtonSpellIV)
+        plusButtonSpellIV = findViewById(R.id.plusButtonSpellIV)
 
         countFocalSpell = findViewById(R.id.countFocalSpell)
         minusButtonFocalSpell = findViewById(R.id.minusButtonFocalSpell)
@@ -228,6 +237,21 @@ class MainActivity : AppCompatActivity() {
                 countSpellIII?.setText(MAX_SPELL_III_COUNT.toString())
         }
 
+        // Ячейки четвёртого уровня
+        if (countSpellIV?.text.toString() == "")
+            countSpellIV?.setText(MAX_SPELL_IV_COUNT.toString())
+
+        minusButtonSpellIV.setOnClickListener {
+            countSpellIV?.setText((countSpellIV.text.toString().toInt() - 1).toString())
+            if (countSpellIV?.text.toString().toInt() < 0)
+                countSpellIV?.setText(0.toString())
+        }
+        plusButtonSpellIV.setOnClickListener {
+            countSpellIV?.setText((countSpellIV.text.toString().toInt() + 1).toString())
+            if (countSpellIV?.text.toString().toInt() > MAX_SPELL_IV_COUNT)
+                countSpellIV?.setText(MAX_SPELL_IV_COUNT.toString())
+        }
+
         // Ячейки фокальных заклинаний
         if (countFocalSpell?.text.toString() == "")
             countFocalSpell?.setText(MAX_FOCAL_SPELL_COUNT.toString())
@@ -308,6 +332,7 @@ class MainActivity : AppCompatActivity() {
             countSpellI?.setText(MAX_SPELL_I_COUNT.toString())
             countSpellII?.setText(MAX_SPELL_II_COUNT.toString())
             countSpellIII?.setText(MAX_SPELL_III_COUNT.toString())
+            countSpellIV?.setText(MAX_SPELL_III_COUNT.toString())
             countFocalSpell?.setText(MAX_FOCAL_SPELL_COUNT.toString())
             // Фрукты
             countFicusFruits?.setText((countFicusFruits.text.toString().toInt() + 1).toString())

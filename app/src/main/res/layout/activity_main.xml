@@ -278,6 +278,49 @@
                     </LinearLayout>
                 </LinearLayout>
 
+                <!-- Ячейки четвёртого уровня -->
+                <LinearLayout
+                    android:id="@+id/SpellIV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textSpellIV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Количество ячеек четвёртого уровня"
+                        android:textAlignment="center" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/minusButtonSpellIV"
+                            android:layout_width="1dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/button_minus" />
+
+                        <TextView
+                            android:id="@+id/countSpellIV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:textAlignment="center" />
+
+                        <Button
+                            android:id="@+id/plusButtonSpellIV"
+                            android:layout_width="1dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/button_plus" />
+                    </LinearLayout>
+                </LinearLayout>
+
                 <!-- Ячейки фокальных заклинаний уровня -->
                 <LinearLayout
                     android:id="@+id/FocalSpell"
