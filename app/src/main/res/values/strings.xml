@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">Ficus resources counter</string>
     <string name="button_plus">+</string>
+    <string name="button_plus_five">+5</string>
+    <string name="button_plus_ten">+10</string>
     <string name="button_minus">-</string>
+    <string name="button_minus_five">-5</string>
+    <string name="button_minus_ten">-10</string>
 </resources>

@@ -83,8 +83,22 @@
                         android:orientation="horizontal">
 
                         <Button
+                            android:id="@+id/minusTenButtonFicusHP"
+                            android:layout_width="0.2dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/button_minus_ten" />
+
+                        <Button
+                            android:id="@+id/minusFiveButtonFicusHP"
+                            android:layout_width="0.2dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/button_minus_five" />
+
+                        <Button
                             android:id="@+id/minusButtonFicusHP"
-                            android:layout_width="1dp"
+                            android:layout_width="0.2dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="@string/button_minus" />
@@ -103,6 +117,20 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="@string/button_plus" />
+
+                        <Button
+                            android:id="@+id/plusFiveButtonFicusHP"
+                            android:layout_width="1dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/button_plus_five" />
+
+                        <Button
+                            android:id="@+id/plusTenButtonFicusHP"
+                            android:layout_width="1dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/button_plus_ten" />
                     </LinearLayout>
                 </LinearLayout>
 
