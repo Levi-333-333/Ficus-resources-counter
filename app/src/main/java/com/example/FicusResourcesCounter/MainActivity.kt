@@ -55,11 +55,19 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var countCommonIngredients: TextView
     private lateinit var minusButtonCommonIngredients: Button
+    private lateinit var minusFiveButtonCommonIngredients: Button
+    private lateinit var minusTenButtonCommonIngredients: Button
     private lateinit var plusButtonCommonIngredients: Button
+    private lateinit var plusFiveButtonCommonIngredients: Button
+    private lateinit var plusTenButtonCommonIngredients: Button
 
     private lateinit var countSpecialIngredients: TextView
     private lateinit var minusButtonSpecialIngredients: Button
+    private lateinit var minusFiveButtonSpecialIngredients: Button
+    private lateinit var minusTenButtonSpecialIngredients: Button
     private lateinit var plusButtonSpecialIngredients: Button
+    private lateinit var plusFiveButtonSpecialIngredients: Button
+    private lateinit var plusTenButtonSpecialIngredients: Button
 
     private lateinit var countMaestrosInstrument: TextView
     private lateinit var minusButtonMaestrosInstrument: Button
@@ -175,11 +183,19 @@ class MainActivity : AppCompatActivity() {
 
         countCommonIngredients = findViewById(R.id.countCommonIngredients)
         minusButtonCommonIngredients = findViewById(R.id.minusButtonCommonIngredients)
+        minusFiveButtonCommonIngredients = findViewById(R.id.minusFiveButtonCommonIngredients)
+        minusTenButtonCommonIngredients = findViewById(R.id.minusTenButtonCommonIngredients)
         plusButtonCommonIngredients = findViewById(R.id.plusButtonCommonIngredients)
+        plusFiveButtonCommonIngredients = findViewById(R.id.plusFiveButtonCommonIngredients)
+        plusTenButtonCommonIngredients = findViewById(R.id.plusTenButtonCommonIngredients)
 
         countSpecialIngredients = findViewById(R.id.countSpecialIngredients)
         minusButtonSpecialIngredients = findViewById(R.id.minusButtonSpecialIngredients)
+        minusFiveButtonSpecialIngredients = findViewById(R.id.minusFiveButtonSpecialIngredients)
+        minusTenButtonSpecialIngredients = findViewById(R.id.minusTenButtonSpecialIngredients)
         plusButtonSpecialIngredients = findViewById(R.id.plusButtonSpecialIngredients)
+        plusFiveButtonSpecialIngredients = findViewById(R.id.plusFiveButtonSpecialIngredients)
+        plusTenButtonSpecialIngredients = findViewById(R.id.plusTenButtonSpecialIngredients)
 
         countMaestrosInstrument = findViewById(R.id.countMaestrosInstrument)
         minusButtonMaestrosInstrument = findViewById(R.id.minusButtonMaestrosInstrument)
@@ -312,8 +328,21 @@ class MainActivity : AppCompatActivity() {
         minusButtonCommonIngredients.setOnClickListener {
             minusButtonHandle(countCommonIngredients, 1)
         }
+        minusFiveButtonCommonIngredients.setOnClickListener {
+            minusButtonHandle(countCommonIngredients, 5)
+        }
+        minusTenButtonCommonIngredients.setOnClickListener {
+            minusButtonHandle(countCommonIngredients, 10)
+        }
+
         plusButtonCommonIngredients.setOnClickListener {
             plusButtonHandle(countCommonIngredients, 1)
+        }
+        plusFiveButtonCommonIngredients.setOnClickListener {
+            plusButtonHandle(countCommonIngredients, 5)
+        }
+        plusTenButtonCommonIngredients.setOnClickListener {
+            plusButtonHandle(countCommonIngredients, 10)
         }
 
         // Особые ингридиенты
@@ -323,8 +352,21 @@ class MainActivity : AppCompatActivity() {
         minusButtonSpecialIngredients.setOnClickListener {
             minusButtonHandle(countSpecialIngredients, 1)
         }
+        minusFiveButtonSpecialIngredients.setOnClickListener {
+            minusButtonHandle(countSpecialIngredients, 5)
+        }
+        minusTenButtonSpecialIngredients.setOnClickListener {
+            minusButtonHandle(countSpecialIngredients, 10)
+        }
+
         plusButtonSpecialIngredients.setOnClickListener {
             plusButtonHandle(countSpecialIngredients, 1)
+        }
+        plusFiveButtonSpecialIngredients.setOnClickListener {
+            plusButtonHandle(countSpecialIngredients, 5)
+        }
+        plusTenButtonSpecialIngredients.setOnClickListener {
+            plusButtonHandle(countSpecialIngredients, 10)
         }
 
         // Инструмент маэстро

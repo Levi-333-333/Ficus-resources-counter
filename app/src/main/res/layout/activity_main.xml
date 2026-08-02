@@ -483,6 +483,20 @@
                         android:orientation="horizontal">
 
                         <Button
+                            android:id="@+id/minusTenButtonCommonIngredients"
+                            android:layout_width="1dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/button_minus_ten" />
+
+                        <Button
+                            android:id="@+id/minusFiveButtonCommonIngredients"
+                            android:layout_width="1dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/button_minus_five" />
+
+                        <Button
                             android:id="@+id/minusButtonCommonIngredients"
                             android:layout_width="1dp"
                             android:layout_height="wrap_content"
@@ -503,6 +517,20 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="@string/button_plus" />
+
+                        <Button
+                            android:id="@+id/plusFiveButtonCommonIngredients"
+                            android:layout_width="1dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/button_plus_five" />
+
+                        <Button
+                            android:id="@+id/plusTenButtonCommonIngredients"
+                            android:layout_width="1dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/button_plus_ten" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -526,6 +554,20 @@
                         android:orientation="horizontal">
 
                         <Button
+                            android:id="@+id/minusTenButtonSpecialIngredients"
+                            android:layout_width="1dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/button_minus_ten" />
+
+                        <Button
+                            android:id="@+id/minusFiveButtonSpecialIngredients"
+                            android:layout_width="1dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/button_minus_five" />
+
+                        <Button
                             android:id="@+id/minusButtonSpecialIngredients"
                             android:layout_width="1dp"
                             android:layout_height="wrap_content"
@@ -546,6 +588,20 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="@string/button_plus" />
+
+                        <Button
+                            android:id="@+id/plusFiveButtonSpecialIngredients"
+                            android:layout_width="1dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/button_plus_five" />
+
+                        <Button
+                            android:id="@+id/plusTenButtonSpecialIngredients"
+                            android:layout_width="1dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/button_plus_ten" />
                     </LinearLayout>
                 </LinearLayout>
 
