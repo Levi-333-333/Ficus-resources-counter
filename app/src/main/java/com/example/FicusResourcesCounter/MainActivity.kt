@@ -244,14 +244,10 @@ class MainActivity : AppCompatActivity() {
             countSpellI?.setText(MAX_SPELL_I_COUNT.toString())
 
         minusButtonSpellI.setOnClickListener {
-            countSpellI?.setText((countSpellI.text!!.toString().toInt() - 1).toString())
-            if (countSpellI?.text.toString().toInt() < 0)
-                countSpellI?.setText(0.toString())
+            minusButtonHandle(countSpellI, 1)
         }
         plusButtonSpellI.setOnClickListener {
-            countSpellI?.setText((countSpellI.text!!.toString().toInt() + 1).toString())
-            if (countSpellI?.text.toString().toInt() > MAX_SPELL_I_COUNT)
-                countSpellI?.setText(MAX_SPELL_I_COUNT.toString())
+            plusButtonHandle(countSpellI, 1, max=MAX_SPELL_I_COUNT)
         }
 
         // Ячейки второго уровня
@@ -259,14 +255,10 @@ class MainActivity : AppCompatActivity() {
             countSpellII?.setText(MAX_SPELL_II_COUNT.toString())
 
         minusButtonSpellII.setOnClickListener {
-            countSpellII?.setText((countSpellII.text.toString().toInt() - 1).toString())
-            if (countSpellII?.text.toString().toInt() < 0)
-                countSpellII?.setText(0.toString())
+            minusButtonHandle(countSpellII, 1)
         }
         plusButtonSpellII.setOnClickListener {
-            countSpellII?.setText((countSpellII.text.toString().toInt() + 1).toString())
-            if (countSpellII?.text.toString().toInt() > MAX_SPELL_II_COUNT)
-                countSpellII?.setText(MAX_SPELL_II_COUNT.toString())
+            plusButtonHandle(countSpellII, 1, max=MAX_SPELL_II_COUNT)
         }
 
         // Ячейки третьего уровня
@@ -274,14 +266,10 @@ class MainActivity : AppCompatActivity() {
             countSpellIII?.setText(MAX_SPELL_III_COUNT.toString())
 
         minusButtonSpellIII.setOnClickListener {
-            countSpellIII?.setText((countSpellIII.text.toString().toInt() - 1).toString())
-            if (countSpellIII?.text.toString().toInt() < 0)
-                countSpellIII?.setText(0.toString())
+            minusButtonHandle(countSpellIII, 1)
         }
         plusButtonSpellIII.setOnClickListener {
-            countSpellIII?.setText((countSpellIII.text.toString().toInt() + 1).toString())
-            if (countSpellIII?.text.toString().toInt() > MAX_SPELL_III_COUNT)
-                countSpellIII?.setText(MAX_SPELL_III_COUNT.toString())
+            plusButtonHandle(countSpellIII, 1, max=MAX_SPELL_III_COUNT)
         }
 
         // Ячейки четвёртого уровня
@@ -289,14 +277,10 @@ class MainActivity : AppCompatActivity() {
             countSpellIV?.setText(MAX_SPELL_IV_COUNT.toString())
 
         minusButtonSpellIV.setOnClickListener {
-            countSpellIV?.setText((countSpellIV.text.toString().toInt() - 1).toString())
-            if (countSpellIV?.text.toString().toInt() < 0)
-                countSpellIV?.setText(0.toString())
+            minusButtonHandle(countSpellIV, 1)
         }
         plusButtonSpellIV.setOnClickListener {
-            countSpellIV?.setText((countSpellIV.text.toString().toInt() + 1).toString())
-            if (countSpellIV?.text.toString().toInt() > MAX_SPELL_IV_COUNT)
-                countSpellIV?.setText(MAX_SPELL_IV_COUNT.toString())
+            plusButtonHandle(countSpellIV, 1, max=MAX_SPELL_IV_COUNT)
         }
 
         // Ячейки фокальных заклинаний
@@ -304,14 +288,10 @@ class MainActivity : AppCompatActivity() {
             countFocalSpell?.setText(MAX_FOCAL_SPELL_COUNT.toString())
 
         minusButtonFocalSpell.setOnClickListener {
-            countFocalSpell?.setText((countFocalSpell.text.toString().toInt() - 1).toString())
-            if (countFocalSpell?.text.toString().toInt() < 0)
-                countFocalSpell?.setText(0.toString())
+            minusButtonHandle(countFocalSpell, 1)
         }
         plusButtonFocalSpell.setOnClickListener {
-            countFocalSpell?.setText((countFocalSpell.text.toString().toInt() + 1).toString())
-            if (countFocalSpell?.text.toString().toInt() > MAX_FOCAL_SPELL_COUNT)
-                countFocalSpell?.setText(MAX_FOCAL_SPELL_COUNT.toString())
+            plusButtonHandle(countFocalSpell, 1, max=MAX_FOCAL_SPELL_COUNT)
         }
 
         // Фрукты Фикуса
@@ -319,14 +299,10 @@ class MainActivity : AppCompatActivity() {
             countFicusFruits?.setText(MAX_FICUS_FRUITS.toString())
 
         minusButtonFicusFruits.setOnClickListener {
-            countFicusFruits?.setText((countFicusFruits.text.toString().toInt() - 1).toString())
-            if (countFicusFruits?.text.toString().toInt() < 0)
-                countFicusFruits?.setText(0.toString())
+            minusButtonHandle(countFicusFruits, 1)
         }
         plusButtonFicusFruits.setOnClickListener {
-            countFicusFruits?.setText((countFicusFruits.text.toString().toInt() + 1).toString())
-            if (countFicusFruits?.text.toString().toInt() > MAX_FICUS_FRUITS)
-                countFicusFruits?.setText(MAX_FICUS_FRUITS.toString())
+            plusButtonHandle(countFicusFruits, 1, max=MAX_FICUS_FRUITS)
         }
 
         // Обычные ингридиенты
@@ -334,12 +310,10 @@ class MainActivity : AppCompatActivity() {
             countCommonIngredients?.setText(0.toString())
 
         minusButtonCommonIngredients.setOnClickListener {
-            countCommonIngredients?.setText((countCommonIngredients!!.text.toString().toInt() - 1).toString())
-            if (countCommonIngredients?.text.toString().toInt() < 0)
-                countCommonIngredients?.setText(0.toString())
+            minusButtonHandle(countCommonIngredients, 1)
         }
         plusButtonCommonIngredients.setOnClickListener {
-            countCommonIngredients?.setText((countCommonIngredients!!.text.toString().toInt() + 1).toString())
+            plusButtonHandle(countCommonIngredients, 1)
         }
 
         // Особые ингридиенты
@@ -347,12 +321,10 @@ class MainActivity : AppCompatActivity() {
             countSpecialIngredients?.setText(0.toString())
 
         minusButtonSpecialIngredients.setOnClickListener {
-            countSpecialIngredients?.setText((countSpecialIngredients!!.text.toString().toInt() - 1).toString())
-            if (countSpecialIngredients?.text.toString().toInt() < 0)
-                countSpecialIngredients?.setText(0.toString())
+            minusButtonHandle(countSpecialIngredients, 1)
         }
         plusButtonSpecialIngredients.setOnClickListener {
-            countSpecialIngredients?.setText((countSpecialIngredients!!.text.toString().toInt() + 1).toString())
+            plusButtonHandle(countSpecialIngredients, 1)
         }
 
         // Инструмент маэстро
@@ -360,14 +332,10 @@ class MainActivity : AppCompatActivity() {
             countMaestrosInstrument?.setText(1.toString())
 
         minusButtonMaestrosInstrument.setOnClickListener {
-            countMaestrosInstrument?.setText((countMaestrosInstrument!!.text.toString().toInt() - 1).toString())
-            if (countMaestrosInstrument?.text.toString().toInt() < 0)
-                countMaestrosInstrument?.setText(0.toString())
+            minusButtonHandle(countMaestrosInstrument, 1)
         }
         plusButtonMaestrosInstrument.setOnClickListener {
-            countMaestrosInstrument?.setText((countMaestrosInstrument!!.text.toString().toInt() + 1).toString())
-            if (countMaestrosInstrument?.text.toString().toInt() > 1)
-                countMaestrosInstrument?.setText(1.toString())
+            plusButtonHandle(countMaestrosInstrument, 1, max=1)
         }
 
         // Кнопка "Новый день"
