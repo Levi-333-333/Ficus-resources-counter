@@ -15,7 +15,11 @@ import java.io.File
 class MainActivity : AppCompatActivity() {
     private lateinit var countFicusHP: TextView
     private lateinit var minusButtonFicusHP: Button
+    private lateinit var minusFiveButtonFicusHP: Button
+    private lateinit var minusTenButtonFicusHP: Button
     private lateinit var plusButtonFicusHP: Button
+    private lateinit var plusFiveButtonFicusHP: Button
+    private lateinit var plusTenButtonFicusHP: Button
 
     private lateinit var countOwlbearHP: TextView
     private lateinit var minusButtonOwlbearHP: Button
@@ -101,6 +105,19 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private fun minusButtonHandle(counter: TextView, minus: Int) {
+        counter?.setText((counter.text!!.toString().toInt() - minus).toString())
+        if (counter?.text.toString().toInt() < 0)
+            counter?.setText(0.toString())
+    }
+    private fun plusButtonHandle(counter: TextView, plus: Int, max: Int? = null) {
+        counter?.setText((counter.text!!.toString().toInt() + plus).toString())
+        if (max != null) {
+            if (counter?.text.toString().toInt() > max)
+                counter?.setText(max.toString())
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -114,7 +131,11 @@ class MainActivity : AppCompatActivity() {
         // Инициализация полей
         countFicusHP = findViewById(R.id.countFicusHP)
         minusButtonFicusHP = findViewById(R.id.minusButtonFicusHP)
+        minusFiveButtonFicusHP = findViewById(R.id.minusFiveButtonFicusHP)
+        minusTenButtonFicusHP = findViewById(R.id.minusTenButtonFicusHP)
         plusButtonFicusHP = findViewById(R.id.plusButtonFicusHP)
+        plusFiveButtonFicusHP = findViewById(R.id.plusFiveButtonFicusHP)
+        plusTenButtonFicusHP = findViewById(R.id.plusTenButtonFicusHP)
 
         countOwlbearHP = findViewById(R.id.countOwlbearHP)
         minusButtonOwlbearHP = findViewById(R.id.minusButtonOwlbearHP)
@@ -167,14 +188,23 @@ class MainActivity : AppCompatActivity() {
             countFicusHP?.setText(MAX_FICUS_HP_COUNT.toString())
 
         minusButtonFicusHP.setOnClickListener {
-            countFicusHP?.setText((countFicusHP.text!!.toString().toInt() - 1).toString())
-            if (countFicusHP?.text.toString().toInt() < 0)
-                countFicusHP?.setText(0.toString())
+            minusButtonHandle(countFicusHP, 1)
         }
+        minusFiveButtonFicusHP.setOnClickListener {
+            minusButtonHandle(countFicusHP, 5)
+        }
+        minusTenButtonFicusHP.setOnClickListener {
+            minusButtonHandle(countFicusHP, 10)
+        }
+
         plusButtonFicusHP.setOnClickListener {
-            countFicusHP?.setText((countFicusHP.text!!.toString().toInt() + 1).toString())
-            if (countFicusHP?.text.toString().toInt() > MAX_FICUS_HP_COUNT)
-                countFicusHP?.setText(MAX_FICUS_HP_COUNT.toString())
+            plusButtonHandle(countFicusHP, 1, max=MAX_FICUS_HP_COUNT)
+        }
+        plusFiveButtonFicusHP.setOnClickListener {
+            plusButtonHandle(countFicusHP, 5, max=MAX_FICUS_HP_COUNT)
+        }
+        plusTenButtonFicusHP.setOnClickListener {
+            plusButtonHandle(countFicusHP, 10, max=MAX_FICUS_HP_COUNT)
         }
 
         // ХП Совомеда
