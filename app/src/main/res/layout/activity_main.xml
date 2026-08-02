@@ -154,6 +154,20 @@
                         android:orientation="horizontal">
 
                         <Button
+                            android:id="@+id/minusTenButtonOwlbearHP"
+                            android:layout_width="1dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/button_minus_ten" />
+
+                        <Button
+                            android:id="@+id/minusFiveButtonOwlbearHP"
+                            android:layout_width="1dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/button_minus_five" />
+
+                        <Button
                             android:id="@+id/minusButtonOwlbearHP"
                             android:layout_width="1dp"
                             android:layout_height="wrap_content"
@@ -174,6 +188,20 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="@string/button_plus" />
+
+                        <Button
+                            android:id="@+id/plusFiveButtonOwlbearHP"
+                            android:layout_width="1dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/button_plus_five" />
+
+                        <Button
+                            android:id="@+id/plusTenButtonOwlbearHP"
+                            android:layout_width="1dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/button_plus_ten" />
                     </LinearLayout>
                 </LinearLayout>
 

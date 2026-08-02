@@ -23,7 +23,11 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var countOwlbearHP: TextView
     private lateinit var minusButtonOwlbearHP: Button
+    private lateinit var minusFiveButtonOwlbearHP: Button
+    private lateinit var minusTenButtonOwlbearHP: Button
     private lateinit var plusButtonOwlbearHP: Button
+    private lateinit var plusFiveButtonOwlbearHP: Button
+    private lateinit var plusTenButtonOwlbearHP: Button
 
     private lateinit var countSpellI: TextView
     private lateinit var minusButtonSpellI: Button
@@ -139,7 +143,11 @@ class MainActivity : AppCompatActivity() {
 
         countOwlbearHP = findViewById(R.id.countOwlbearHP)
         minusButtonOwlbearHP = findViewById(R.id.minusButtonOwlbearHP)
+        minusFiveButtonOwlbearHP = findViewById(R.id.minusFiveButtonOwlbearHP)
+        minusTenButtonOwlbearHP = findViewById(R.id.minusTenButtonOwlbearHP)
         plusButtonOwlbearHP = findViewById(R.id.plusButtonOwlbearHP)
+        plusFiveButtonOwlbearHP = findViewById(R.id.plusFiveButtonOwlbearHP)
+        plusTenButtonOwlbearHP = findViewById(R.id.plusTenButtonOwlbearHP)
 
         countSpellI = findViewById(R.id.countSpellI)
         minusButtonSpellI = findViewById(R.id.minusButtonSpellI)
@@ -212,14 +220,23 @@ class MainActivity : AppCompatActivity() {
             countOwlbearHP?.setText(MAX_OWLBEAR_HP_COUNT.toString())
 
         minusButtonOwlbearHP.setOnClickListener {
-            countOwlbearHP?.setText((countOwlbearHP.text!!.toString().toInt() - 1).toString())
-            if (countOwlbearHP?.text.toString().toInt() < 0)
-                countOwlbearHP?.setText(0.toString())
+            minusButtonHandle(countOwlbearHP, 1)
         }
+        minusFiveButtonOwlbearHP.setOnClickListener {
+            minusButtonHandle(countOwlbearHP, 5)
+        }
+        minusTenButtonOwlbearHP.setOnClickListener {
+            minusButtonHandle(countOwlbearHP, 10)
+        }
+
         plusButtonOwlbearHP.setOnClickListener {
-            countOwlbearHP?.setText((countOwlbearHP.text!!.toString().toInt() + 1).toString())
-            if (countOwlbearHP?.text.toString().toInt() > MAX_OWLBEAR_HP_COUNT)
-                countOwlbearHP?.setText(MAX_OWLBEAR_HP_COUNT.toString())
+            plusButtonHandle(countOwlbearHP, 1, max=MAX_OWLBEAR_HP_COUNT)
+        }
+        plusFiveButtonOwlbearHP.setOnClickListener {
+            plusButtonHandle(countOwlbearHP, 5, max=MAX_OWLBEAR_HP_COUNT)
+        }
+        plusTenButtonOwlbearHP.setOnClickListener {
+            plusButtonHandle(countOwlbearHP, 10, max=MAX_OWLBEAR_HP_COUNT)
         }
 
         // Ячейки первого уровня
