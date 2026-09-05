@@ -45,6 +45,10 @@ class MainActivity : AppCompatActivity() {
     private lateinit var minusButtonSpellIV: Button
     private lateinit var plusButtonSpellIV: Button
 
+    private lateinit var countSpellV: TextView
+    private lateinit var minusButtonSpellV: Button
+    private lateinit var plusButtonSpellV: Button
+
     private lateinit var countFocalSpell: TextView
     private lateinit var minusButtonFocalSpell: Button
     private lateinit var plusButtonFocalSpell: Button
@@ -85,6 +89,7 @@ class MainActivity : AppCompatActivity() {
         "countSpellII" to countSpellII,
         "countSpellIII" to countSpellIII,
         "countSpellIV" to countSpellIV,
+        "countSpellV" to countSpellV,
         "countFocalSpell" to countFocalSpell,
         "countFicusFruits" to countFicusFruits,
         "countCommonIngredients" to countCommonIngredients,
@@ -172,6 +177,10 @@ class MainActivity : AppCompatActivity() {
         countSpellIV = findViewById(R.id.countSpellIV)
         minusButtonSpellIV = findViewById(R.id.minusButtonSpellIV)
         plusButtonSpellIV = findViewById(R.id.plusButtonSpellIV)
+
+        countSpellV = findViewById(R.id.countSpellV)
+        minusButtonSpellV = findViewById(R.id.minusButtonSpellV)
+        plusButtonSpellV = findViewById(R.id.plusButtonSpellV)
 
         countFocalSpell = findViewById(R.id.countFocalSpell)
         minusButtonFocalSpell = findViewById(R.id.minusButtonFocalSpell)
@@ -297,6 +306,17 @@ class MainActivity : AppCompatActivity() {
         }
         plusButtonSpellIV.setOnClickListener {
             plusButtonHandle(countSpellIV, 1, max=MAX_SPELL_IV_COUNT)
+        }
+
+        // Ячейки пятого уровня
+        if (countSpellV?.text.toString() == "")
+            countSpellV?.setText(MAX_SPELL_V_COUNT.toString())
+
+        minusButtonSpellV.setOnClickListener {
+            minusButtonHandle(countSpellV, 1)
+        }
+        plusButtonSpellV.setOnClickListener {
+            plusButtonHandle(countSpellV, 1, max=MAX_SPELL_V_COUNT)
         }
 
         // Ячейки фокальных заклинаний

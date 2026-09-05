@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:visibility="visible"
     tools:context=".MainActivity">
 
 
@@ -370,6 +370,49 @@
 
                         <Button
                             android:id="@+id/plusButtonSpellIV"
+                            android:layout_width="1dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/button_plus" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Ячейки пятого уровня -->
+                <LinearLayout
+                    android:id="@+id/SpellV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textSpellV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Количество ячеек пятого уровня"
+                        android:textAlignment="center" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/minusButtonSpellV"
+                            android:layout_width="1dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/button_minus" />
+
+                        <TextView
+                            android:id="@+id/countSpellV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:textAlignment="center" />
+
+                        <Button
+                            android:id="@+id/plusButtonSpellV"
                             android:layout_width="1dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
