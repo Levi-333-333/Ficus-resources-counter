@@ -410,6 +410,7 @@ class MainActivity : AppCompatActivity() {
             countSpellII?.setText(MAX_SPELL_II_COUNT.toString())
             countSpellIII?.setText(MAX_SPELL_III_COUNT.toString())
             countSpellIV?.setText(MAX_SPELL_IV_COUNT.toString())
+            countSpellV?.setText(MAX_SPELL_V_COUNT.toString())
             countFocalSpell?.setText(MAX_FOCAL_SPELL_COUNT.toString())
             // Фрукты
             countFicusFruits?.setText((countFicusFruits.text.toString().toInt() + 1).toString())
