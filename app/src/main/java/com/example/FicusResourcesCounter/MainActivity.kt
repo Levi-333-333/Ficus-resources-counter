@@ -77,6 +77,10 @@ class MainActivity : AppCompatActivity() {
     private lateinit var minusButtonMaestrosInstrument: Button
     private lateinit var plusButtonMaestrosInstrument: Button
 
+    private lateinit var countOccultPendant: TextView
+    private lateinit var minusButtonOccultPendant: Button
+    private lateinit var plusButtonOccultPendant: Button
+
     private lateinit var NewDayButton: Button
     private lateinit var SaveButton: Button
 
@@ -94,7 +98,8 @@ class MainActivity : AppCompatActivity() {
         "countFicusFruits" to countFicusFruits,
         "countCommonIngredients" to countCommonIngredients,
         "countSpecialIngredients" to countSpecialIngredients,
-        "countMaestrosInstrument" to countMaestrosInstrument
+        "countMaestrosInstrument" to countMaestrosInstrument,
+        "countOccultPendant" to countOccultPendant
     )
 
     private fun saveProgramm(context: Context) {
@@ -209,6 +214,10 @@ class MainActivity : AppCompatActivity() {
         countMaestrosInstrument = findViewById(R.id.countMaestrosInstrument)
         minusButtonMaestrosInstrument = findViewById(R.id.minusButtonMaestrosInstrument)
         plusButtonMaestrosInstrument = findViewById(R.id.plusButtonMaestrosInstrument)
+
+        countOccultPendant = findViewById(R.id.countOccultPendant)
+        minusButtonOccultPendant = findViewById(R.id.minusButtonOccultPendant)
+        plusButtonOccultPendant = findViewById(R.id.plusButtonOccultPendant)
 
         NewDayButton = findViewById(R.id.NewDayButton)
         SaveButton = findViewById(R.id.SaveButton)
@@ -400,6 +409,17 @@ class MainActivity : AppCompatActivity() {
             plusButtonHandle(countMaestrosInstrument, 1, max=1)
         }
 
+        // Оккультный кулон
+        if (countOccultPendant?.text.toString() == "")
+            countOccultPendant?.setText(1.toString())
+
+        minusButtonOccultPendant.setOnClickListener {
+            minusButtonHandle(countOccultPendant, 1)
+        }
+        plusButtonOccultPendant.setOnClickListener {
+            plusButtonHandle(countOccultPendant, 1, max=1)
+        }
+
         // Кнопка "Новый день"
         NewDayButton.setOnClickListener {
             // Хиты
@@ -418,6 +438,7 @@ class MainActivity : AppCompatActivity() {
                 countFicusFruits?.setText(MAX_FICUS_FRUITS.toString())
             // Восстанавливающиеся расходники
             countMaestrosInstrument?.setText(1.toString())
+            countOccultPendant?.setText(1.toString())
         }
 
         //Кнопка "Сохранить"
