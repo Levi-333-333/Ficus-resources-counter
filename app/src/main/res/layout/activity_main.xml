@@ -420,6 +420,49 @@
                     </LinearLayout>
                 </LinearLayout>
 
+                <!-- Ячейки шестого уровня -->
+                <LinearLayout
+                    android:id="@+id/SpellVI"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textSpellVI"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Количество ячеек шестого уровня"
+                        android:textAlignment="center" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/minusButtonSpellVI"
+                            android:layout_width="1dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/button_minus" />
+
+                        <TextView
+                            android:id="@+id/countSpellVI"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:textAlignment="center" />
+
+                        <Button
+                            android:id="@+id/plusButtonSpellVI"
+                            android:layout_width="1dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/button_plus" />
+                    </LinearLayout>
+                </LinearLayout>
+
                 <!-- Ячейки фокальных заклинаний уровня -->
                 <LinearLayout
                     android:id="@+id/FocalSpell"

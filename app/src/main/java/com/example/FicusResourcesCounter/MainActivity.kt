@@ -50,6 +50,10 @@ class MainActivity : AppCompatActivity() {
     private lateinit var minusButtonSpellV: Button
     private lateinit var plusButtonSpellV: Button
 
+    private lateinit var countSpellVI: TextView
+    private lateinit var minusButtonSpellVI: Button
+    private lateinit var plusButtonSpellVI: Button
+
     private lateinit var countFocalSpell: TextView
     private lateinit var minusButtonFocalSpell: Button
     private lateinit var plusButtonFocalSpell: Button
@@ -95,6 +99,7 @@ class MainActivity : AppCompatActivity() {
         "countSpellIII" to countSpellIII,
         "countSpellIV" to countSpellIV,
         "countSpellV" to countSpellV,
+        "countSpellVI" to countSpellVI,
         "countFocalSpell" to countFocalSpell,
         "countFicusFruits" to countFicusFruits,
         "countCommonIngredients" to countCommonIngredients,
@@ -187,6 +192,10 @@ class MainActivity : AppCompatActivity() {
         countSpellV = findViewById(R.id.countSpellV)
         minusButtonSpellV = findViewById(R.id.minusButtonSpellV)
         plusButtonSpellV = findViewById(R.id.plusButtonSpellV)
+
+        countSpellVI = findViewById(R.id.countSpellVI)
+        minusButtonSpellVI = findViewById(R.id.minusButtonSpellVI)
+        plusButtonSpellVI = findViewById(R.id.plusButtonSpellVI)
 
         countFocalSpell = findViewById(R.id.countFocalSpell)
         minusButtonFocalSpell = findViewById(R.id.minusButtonFocalSpell)
@@ -329,6 +338,17 @@ class MainActivity : AppCompatActivity() {
             plusButtonHandle(countSpellV, 1, max=MAX_SPELL_V_COUNT)
         }
 
+        // Ячейки пятого уровня
+        if (countSpellVI?.text.toString() == "")
+            countSpellVI?.setText(MAX_SPELL_VI_COUNT.toString())
+
+        minusButtonSpellVI.setOnClickListener {
+            minusButtonHandle(countSpellVI, 1)
+        }
+        plusButtonSpellVI.setOnClickListener {
+            plusButtonHandle(countSpellVI, 1, max=MAX_SPELL_VI_COUNT)
+        }
+
         // Ячейки фокальных заклинаний
         if (countFocalSpell?.text.toString() == "")
             countFocalSpell?.setText(MAX_FOCAL_SPELL_COUNT.toString())
@@ -432,6 +452,7 @@ class MainActivity : AppCompatActivity() {
             countSpellIII?.setText(MAX_SPELL_III_COUNT.toString())
             countSpellIV?.setText(MAX_SPELL_IV_COUNT.toString())
             countSpellV?.setText(MAX_SPELL_V_COUNT.toString())
+            countSpellVI?.setText(MAX_SPELL_VI_COUNT.toString())
             countFocalSpell?.setText(MAX_FOCAL_SPELL_COUNT.toString())
             // Фрукты
             countFicusFruits?.setText((countFicusFruits.text.toString().toInt() + 1).toString())
