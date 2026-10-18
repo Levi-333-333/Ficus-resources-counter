@@ -86,6 +86,10 @@ class MainActivity : AppCompatActivity() {
     private lateinit var minusButtonOccultPendant: Button
     private lateinit var plusButtonOccultPendant: Button
 
+    private lateinit var countMoonlitChain: TextView
+    private lateinit var minusButtonMoonlitChain: Button
+    private lateinit var plusButtonMoonlitChain: Button
+
     private lateinit var NewDayButton: Button
     private lateinit var SaveButton: Button
 
@@ -105,7 +109,8 @@ class MainActivity : AppCompatActivity() {
         "countCommonIngredients" to countCommonIngredients,
         "countSpecialIngredients" to countSpecialIngredients,
         "countMaestrosInstrument" to countMaestrosInstrument,
-        "countOccultPendant" to countOccultPendant
+        "countOccultPendant" to countOccultPendant,
+        "countMoonlitChain" to countMoonlitChain
     )
 
     private fun saveProgramm(context: Context) {
@@ -229,6 +234,10 @@ class MainActivity : AppCompatActivity() {
         minusButtonOccultPendant = findViewById(R.id.minusButtonOccultPendant)
         plusButtonOccultPendant = findViewById(R.id.plusButtonOccultPendant)
 
+        countMoonlitChain = findViewById(R.id.countMoonlitChain)
+        minusButtonMoonlitChain = findViewById(R.id.minusButtonMoonlitChain)
+        plusButtonMoonlitChain = findViewById(R.id.plusButtonMoonlitChain)
+
         NewDayButton = findViewById(R.id.NewDayButton)
         SaveButton = findViewById(R.id.SaveButton)
 
@@ -338,7 +347,7 @@ class MainActivity : AppCompatActivity() {
             plusButtonHandle(countSpellV, 1, max=MAX_SPELL_V_COUNT)
         }
 
-        // Ячейки пятого уровня
+        // Ячейки шестого уровня
         if (countSpellVI?.text.toString() == "")
             countSpellVI?.setText(MAX_SPELL_VI_COUNT.toString())
 
@@ -441,6 +450,17 @@ class MainActivity : AppCompatActivity() {
             plusButtonHandle(countOccultPendant, 1, max=1)
         }
 
+        //Лунная кольчужная рубаха
+        if (countMoonlitChain?.text.toString() == "")
+            countMoonlitChain?.setText(1.toString())
+
+        minusButtonMoonlitChain.setOnClickListener {
+            minusButtonHandle(countMoonlitChain, 1)
+        }
+        plusButtonMoonlitChain.setOnClickListener {
+            plusButtonHandle(countMoonlitChain, 1, max=1)
+        }
+
         // Кнопка "Новый день"
         NewDayButton.setOnClickListener {
             // Хиты
@@ -461,6 +481,7 @@ class MainActivity : AppCompatActivity() {
             // Восстанавливающиеся расходники
             countMaestrosInstrument?.setText(1.toString())
             countOccultPendant?.setText(1.toString())
+            countMoonlitChain?.setText(1.toString())
         }
 
         //Кнопка "Сохранить"
