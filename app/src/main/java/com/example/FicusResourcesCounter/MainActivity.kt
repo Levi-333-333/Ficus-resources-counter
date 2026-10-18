@@ -11,6 +11,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import java.io.File
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
     private lateinit var countFicusHP: TextView
@@ -444,6 +445,7 @@ class MainActivity : AppCompatActivity() {
         //Кнопка "Сохранить"
         SaveButton.setOnClickListener {
             saveProgramm(this)
+            Toast.makeText(this, "Успешно сохранено", Toast.LENGTH_SHORT).show()
         }
     }
 }
