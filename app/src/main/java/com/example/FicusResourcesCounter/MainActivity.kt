@@ -30,6 +30,14 @@ class MainActivity : AppCompatActivity() {
     private lateinit var plusFiveButtonOwlbearHP: Button
     private lateinit var plusTenButtonOwlbearHP: Button
 
+    private lateinit var countWyvernHP: TextView
+    private lateinit var minusButtonWyvernHP: Button
+    private lateinit var minusFiveButtonWyvernHP: Button
+    private lateinit var minusTenButtonWyvernHP: Button
+    private lateinit var plusButtonWyvernHP: Button
+    private lateinit var plusFiveButtonWyvernHP: Button
+    private lateinit var plusTenButtonWyvernHP: Button
+
     private lateinit var countSpellI: TextView
     private lateinit var minusButtonSpellI: Button
     private lateinit var plusButtonSpellI: Button
@@ -98,6 +106,7 @@ class MainActivity : AppCompatActivity() {
     private fun getCounterMap(): Map<String, TextView> = mapOf(
         "countFicusHP" to countFicusHP,
         "countOwlbearHP" to countOwlbearHP,
+        "countWyvernHP" to countWyvernHP,
         "countSpellI" to countSpellI,
         "countSpellII" to countSpellII,
         "countSpellIII" to countSpellIII,
@@ -177,6 +186,14 @@ class MainActivity : AppCompatActivity() {
         plusButtonOwlbearHP = findViewById(R.id.plusButtonOwlbearHP)
         plusFiveButtonOwlbearHP = findViewById(R.id.plusFiveButtonOwlbearHP)
         plusTenButtonOwlbearHP = findViewById(R.id.plusTenButtonOwlbearHP)
+
+        countWyvernHP = findViewById(R.id.countWyvernHP)
+        minusButtonWyvernHP = findViewById(R.id.minusButtonWyvernHP)
+        minusFiveButtonWyvernHP = findViewById(R.id.minusFiveButtonWyvernHP)
+        minusTenButtonWyvernHP = findViewById(R.id.minusTenButtonWyvernHP)
+        plusButtonWyvernHP = findViewById(R.id.plusButtonWyvernHP)
+        plusFiveButtonWyvernHP = findViewById(R.id.plusFiveButtonWyvernHP)
+        plusTenButtonWyvernHP = findViewById(R.id.plusTenButtonWyvernHP)
 
         countSpellI = findViewById(R.id.countSpellI)
         minusButtonSpellI = findViewById(R.id.minusButtonSpellI)
@@ -290,6 +307,30 @@ class MainActivity : AppCompatActivity() {
         }
         plusTenButtonOwlbearHP.setOnClickListener {
             plusButtonHandle(countOwlbearHP, 10, max=MAX_OWLBEAR_HP_COUNT)
+        }
+
+        // ХП Виверны
+        if (countWyvernHP?.text.toString() == "")
+            countWyvernHP?.setText(MAX_WYVERN_HP_COUNT.toString())
+
+        minusButtonWyvernHP.setOnClickListener {
+            minusButtonHandle(countWyvernHP, 1)
+        }
+        minusFiveButtonWyvernHP.setOnClickListener {
+            minusButtonHandle(countWyvernHP, 5)
+        }
+        minusTenButtonWyvernHP.setOnClickListener {
+            minusButtonHandle(countWyvernHP, 10)
+        }
+
+        plusButtonWyvernHP.setOnClickListener {
+            plusButtonHandle(countWyvernHP, 1, max=MAX_WYVERN_HP_COUNT)
+        }
+        plusFiveButtonWyvernHP.setOnClickListener {
+            plusButtonHandle(countWyvernHP, 5, max=MAX_WYVERN_HP_COUNT)
+        }
+        plusTenButtonWyvernHP.setOnClickListener {
+            plusButtonHandle(countWyvernHP, 10, max=MAX_WYVERN_HP_COUNT)
         }
 
         // Ячейки первого уровня
@@ -466,6 +507,7 @@ class MainActivity : AppCompatActivity() {
             // Хиты
             countFicusHP?.setText(MAX_FICUS_HP_COUNT.toString())
             countOwlbearHP?.setText(MAX_OWLBEAR_HP_COUNT.toString())
+            countWyvernHP?.setText(MAX_WYVERN_HP_COUNT.toString())
             // Заклинания
             countSpellI?.setText(MAX_SPELL_I_COUNT.toString())
             countSpellII?.setText(MAX_SPELL_II_COUNT.toString())

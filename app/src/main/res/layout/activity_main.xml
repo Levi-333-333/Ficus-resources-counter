@@ -205,6 +205,77 @@
                     </LinearLayout>
                 </LinearLayout>
 
+                <!-- ХП Вивенры -->
+                <LinearLayout
+                    android:id="@+id/WyvernHP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textWyvernHP"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Хиты Стаккаты"
+                        android:textAlignment="center" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/minusTenButtonWyvernHP"
+                            android:layout_width="1dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/button_minus_ten" />
+
+                        <Button
+                            android:id="@+id/minusFiveButtonWyvernHP"
+                            android:layout_width="1dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/button_minus_five" />
+
+                        <Button
+                            android:id="@+id/minusButtonWyvernHP"
+                            android:layout_width="1dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/button_minus" />
+
+                        <TextView
+                            android:id="@+id/countWyvernHP"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:textAlignment="center" />
+
+                        <Button
+                            android:id="@+id/plusButtonWyvernHP"
+                            android:layout_width="1dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/button_plus" />
+
+                        <Button
+                            android:id="@+id/plusFiveButtonWyvernHP"
+                            android:layout_width="1dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/button_plus_five" />
+
+                        <Button
+                            android:id="@+id/plusTenButtonWyvernHP"
+                            android:layout_width="1dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/button_plus_ten" />
+                    </LinearLayout>
+                </LinearLayout>
+
                 <!-- Ячейки первого уровня -->
                 <LinearLayout
                     android:id="@+id/SpellI"
